@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>BMI Calculator</h1>
+    <div id="calculator">
+        <label for="weight">Weight (kg):</label>
+        <input type="number" id="weight">
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height">
+        <button id="calculate">Calculate</button>
+        <p id="result"></p>
+ 
+    </div>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  text-align: center;
+}
+
+#calculator {
+  width: 300px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input,
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#result {
+  text-align: center;
+  font-weight: bold;
+}
+</style>
+    <script >
+        document.getElementById("calculate").addEventListener("click", function() {
+  var weight = document.getElementById("weight").value;
+  var height = document.getElementById("height").value / 100;
+  var bmi = weight / (height * height);
+  document.getElementById("result").textContent = "Your BMI is " + bmi.toFixed(2);
+  document.getElementById.bmi="underweright"
+  var we = document.getElementById("bmi");
+
+});
+    </script>
+<!--Areacircle-->
+
+  <style>
+    #circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color:lightblue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Circle Area</h1>
+  <label for="radius">Enter the radius of the circle:</label>
+  <input type="number" id="radius">
+  <button onclick="calculateArea()">Calculate</button>
+
+  <div id="circle"></div>
+
+  <script>
+    function calculateArea() {
+  var radiusInput = document.getElementById("radius");
+  var radius = parseFloat(radiusInput.value);
+  var area = Math.PI * radius * radius;
+
+  var circle = document.getElementById("circle");
+  circle.style.width = (radius * 2) + "px";
+  circle.style.height = (radius * 2) + "px";
+  circle.style.background = "lightblue";
+  circle.style.borderRadius = "50%";
+
+  alert("The area of the circle is: " + area.toFixed(2));
+}
+  </script>
+
+<!--Menu-->
+
+  <title>Show Menu on Shape Click</title>
+  <style>
+    /* Add styling to shape */
+    .shape {
+      width: 100px;
+      height: 100px;
+      border-radius: 10%;
+      background-color: #ffcc00;
+      cursor: pointer;
+      text-align: center;
+    }
+    /* Hide the menu by default */
+    .menu {
+      display: none;
+    }
+  </style>
+
+
+  <div class="shape">Click here!</div>
+
+  <ul class="menu">
+    <li>Option 1</li>
+    <li>Option 2</li>
+    <li>Option 3</li>
+  </ul>
+  <script>
+    // Get the shape element
+    const shape = document.querySelector('.shape');
+    // Get the menu element
+    const menu = document.querySelector('.menu');
+  
+    // Getting the element with an id of "myButton"
+    let button = document.getElementById("myButton");
+  
+    // Attaching an event handler to the button using onclick
+    button.onclick = function() {
+      alert("Button clicked!");
+      // Check if the menu is already visible
+      if (menu.style.display === 'block') {
+        // Hide the menu
+        menu.style.display = 'none';
+      } else {
+        // Show the menu
+        menu.style.display = 'block';
+      }
+    };
+  </script>
+
+    <h1>Play Music</h1>
+    <button onclick="playMusic()">Play</button>
+    <button onclick="pauseMusic()">Pause</button>
+    <audio id="myAudio" src="Rema - Calm Down (320).mp3"></audio>
+
+    <script>
+        var audio = document.getElementById("myAudio");
+
+        function playMusic() {
+            audio.play();
+        }
+
+        function pauseMusic() {
+            audio.pause();
+        }
+    </script>
+
+</body>
+</html>
+
